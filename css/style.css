@@ -50,7 +50,7 @@ header {
     display:flex;
     justify-content: space-between;
     align-items: center;
-    padding: 2% 5%;
+    padding: 2% 6%;
     
 }
 
@@ -101,9 +101,57 @@ nav button:hover {
 }
 
 
+main {
+    padding: 80px 80px;
+}
+
+.slogan {
+    font-size: 50px;
+    font-weight: 700;
+    padding-bottom:27px;
+}
+
+main p {
+    max-width: 45%;
+    padding-bottom: 12px;
+}
+
+#btn {
+    padding:15px 25px;
+    color:white;
+    background: #3f65f0;
+    border: 2px solid #3f65f0;
+    font-size: 18px;
+    border-radius: 30px;
+    transition: 0.3s;
+}
+
+#btn:hover {
+    letter-spacing: 5px;
+}
 
 
+.quarter-circle {
+    position: absolute;
+    height: 600px;
+    width:600px;
+    right:0;
+    bottom:0;
+    background: #3f65f0;
+    border-top-left-radius: 100%;
+}
 
+.quarter-circle-pc {
+    position:absolute;
+    bottom: 0;
+    right:0;
+    cursor:pointer;
+    transition:0.5s;
+}
+
+.quarter-circle-pc:hover {
+    transform: scale(0.75);
+}
 /* Animation pour les points */
 
 @keyframes bounce {
