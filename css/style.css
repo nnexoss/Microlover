@@ -16,7 +16,9 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    visibility: visible;
     opacity: 1;
+    z-index: 1000;
     animation: fadeOut 3s forwards;
     animation-delay: 5s;
 
@@ -63,20 +65,29 @@ header .nom {
     color:#3f65f0;
 }
 
-nav span a {
-    color:rgb(9, 2, 32);
-    font-size: 17px;
-    padding:8px 12px;
-    transition:0.5s;
-    text-decoration: none;
+ul {
+    display:flex;
+
 }
 
-nav span a:hover{
+ul li {
+    list-style:none;
+    padding: 8px 12px;
+}
+ul li a {
+    color:rgb(9, 2, 32);
+    font-size: 17px;
+    transition:0.5s;
+    text-decoration: none;
+    
+}
+
+ul li a:hover{
     color:#3f65f0;
     border-bottom: 2px solid #3f65f0;
 }
 
-nav span:last-child a:hover {
+ul li:last-child a:hover {
     border-bottom: none;
 }
 
@@ -108,12 +119,11 @@ main {
 .slogan {
     font-size: 50px;
     font-weight: 700;
-    padding-bottom:27px;
 }
 
 main p {
     max-width: 45%;
-    padding-bottom: 12px;
+    margin: 20px 0;
 }
 
 #btn {
@@ -132,7 +142,7 @@ main p {
 
 
 .quarter-circle {
-    position: absolute;
+    position: fixed;
     height: 600px;
     width:600px;
     right:0;
@@ -145,8 +155,13 @@ main p {
     position:absolute;
     bottom: 0;
     right:0;
+    transition: 2s;
+}
+
+.quarter-circle-pc img {
     cursor:pointer;
     transition:0.5s;
+    width:90%;
 }
 
 .quarter-circle-pc:hover {
@@ -180,5 +195,15 @@ main p {
     to {
         opacity:0;
         visibility:hidden;
+    }
+}
+
+@media all and (max-width: 1024px) {
+    header {
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 5% 0;
+        color:white;
+        background-color: #3f65f0;
     }
 }
